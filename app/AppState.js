@@ -69,6 +69,60 @@ class AppState extends EventEmitter {
           imgURL: './assets/img/banana.png'
         }
       ),
+      new Fruit(
+        {
+          name: 'Pineapple',
+          imgURL: './assets/img/pineapple.png'
+        }
+      ),
+      new Fruit(
+        {
+          name: 'Kiwi',
+          imgURL: './assets/img/kiwi.png'
+        }
+      ),
+      new Fruit(
+        {
+          name: 'Coconut',
+          imgURL: './assets/img/coconut.png'
+        }
+      ),
+      new Fruit(
+        {
+          name: 'Grapefruit',
+          imgURL: './assets/img/grapefruit.png'
+        }
+      ),
+      new Fruit(
+        {
+          name: 'Lime',
+          imgURL: './assets/img/lime.png'
+        }
+      ),
+      new Fruit(
+        {
+          name: 'Watermelon',
+          imgURL: './assets/img/watermelon.png'
+        }
+      ),
+      new Fruit(
+        {
+          name: 'Raspberry',
+          imgURL: './assets/img/raspberry.png'
+        }
+      ),
+      new Fruit(
+        {
+          name: 'Apple',
+          imgURL: './assets/img/apple.png'
+        }
+      ),
+      new Fruit(
+        {
+          name: 'Pear',
+          imgURL: './assets/img/pear.png'
+        }
+      ),
     ]
 
     /** @type {import('./Models/Game').Fruit} */
