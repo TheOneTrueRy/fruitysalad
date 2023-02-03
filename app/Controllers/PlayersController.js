@@ -27,9 +27,8 @@ export class PlayersController{
       const form = event.target
       const formData = getFormData(form)
       playersService.SetPlayer(formData)
-      let currentPlayer = appState.player
-      setHTML('players', currentPlayer.CurrentPlayer)
       gamesService.StartGame()
+      playersService.DrawPlayer()
       setTimeout(_drawPlayers, 60000)
       // @ts-ignore
       bootstrap.Offcanvas.getOrCreateInstance('#offcanvasBottom').hide()

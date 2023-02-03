@@ -14,18 +14,7 @@ class AppState extends EventEmitter {
   values = loadState('values', [Value])
 
    /** @type {import('./Models/Player').Player[]} */
-    players = [
-    new Player(
-      {
-        name: 'Moe'
-      }
-    ),
-    new Player(
-      {
-        name: 'Curly'
-      }
-    )
-    ]
+    players = loadState('players', [Player])
 
      /** @type {import('./Models/Player').Player} */
     player = null

@@ -1,4 +1,5 @@
 import { appState } from "../AppState.js"
+import { saveState } from "../Utils/Store.js"
 import { setHTML, setText } from "../Utils/Writer.js"
 
 class GamesService{
@@ -22,13 +23,14 @@ class GamesService{
     }
   
     EndGame(){
-      let currentPlayer = appState.player
-        if(currentPlayer.score > currentPlayer.highScore){
-          currentPlayer.highScore = currentPlayer.score
+        if(appState.player.score > appState.player.highScore){
+          appState.player.highScore = appState.player.score
         }
+        saveState('players', appState.players)
         clearInterval(appState.IDs[0])
         setHTML('setPlayer', `<button type="submit" class="btn rounded myBtn py-2 fs-5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">Set Player</button>`)
         setHTML('typing', `<h3>Correctly type the name of as many fruit as you can within a minute!</h3>`)
+        setText('timer', '')
     }
 
     DrawRandomFruit(){
@@ -36,6 +38,7 @@ class GamesService{
       console.log(randomFruit)
       setHTML('fruit', randomFruit.FruitImage)
       appState.fruit = randomFruit
+      console.log(appState.fruit)
     }
 }
 
