@@ -21,29 +21,35 @@
 
   <main>
     <div class="container-fluid">
+      <!-- SECTION Top (Fruit) Row -->
       <div class="row" id="game-fruit">
-        <div class="col-12 d-flex justify-content-center align-items-center">
-          <h1 class="">the fruit</h1>
+        <div class="col-8 offset-2 d-flex justify-content-center align-items-center" id="fruit">
+          <!-- STUB Where The Random Fruit Is Injected -->
+          <h1>Fruit Salad!</h1>
+        </div>
+        <div class="col-2 d-flex align-items-center fw-bold">
+          <span class="fs-1" id="timer"></span>
         </div>
       </div>
-      <div class="row" id="submission-fruit">
-        <div class="col-12 d-flex justify-content-center">
-          <form>
-            <input type="text" name="fruit" id="fruit-submit" class="text-center">
-          </form>
-        </div>
-      </div>
+      <!-- SECTION Middle (Typing) Row -->
       <div class="row">
-        <div class="col-12 d-flex justify-content-center mt-5">
+        <div class="col-12 d-flex justify-content-center"  id="typing">
+          <h3>Correctly type the name of as many fruit as you can within a minute!</h3>
+        </div>
+      </div>
+      <!-- SECTION Bottom (Players) Row -->
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center mt-5" id="setPlayer">
           <button type="submit" class="btn rounded myBtn py-2 fs-5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">Set Player</button>
         </div>
         <div id="players" class="col-6 offset-3 d-flex flex-column align-items-center mt-4 fs-3">
+          <!-- STUB Where The Players Are Injected -->
         </div>
       </div>
     </div>
   </main>
 
-  <!-- SECTION  -->
+  <!-- SECTION Bootstrap -->
 
   <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
     <div class="offcanvas-header">
@@ -56,18 +62,6 @@
       </form>
     </div>
   </div>
-
-  <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Toggle bottom offcanvas</button>
-
-  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body small">
-      ...
-    </div>
-  </div> -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

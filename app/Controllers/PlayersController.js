@@ -1,5 +1,7 @@
 
 import { appState } from "../AppState.js"
+import { Player } from "../Models/Player.js"
+import { gamesService } from "../Services/GamesService.js"
 import { playersService } from "../Services/PlayersService.js"
 import { getFormData } from "../Utils/FormHandler.js"
 import { Pop } from "../Utils/Pop.js"
@@ -17,6 +19,7 @@ export class PlayersController{
     _drawPlayers()
     appState.on('players', _drawPlayers)
   }
+  
 
   handleFormSubmission(){
     try {
@@ -24,7 +27,10 @@ export class PlayersController{
       const form = event.target
       const formData = getFormData(form)
       playersService.SetPlayer(formData)
-      
+      let currentPlayer = appState.player
+      setHTML('players', currentPlayer.CurrentPlayer)
+      gamesService.StartGame()
+      setTimeout(_drawPlayers, 60000)
       // @ts-ignore
       bootstrap.Offcanvas.getOrCreateInstance('#offcanvasBottom').hide()
       // @ts-ignore

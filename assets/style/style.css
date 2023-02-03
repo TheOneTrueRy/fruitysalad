@@ -5,6 +5,11 @@ body{
   background: linear-gradient(90deg, rgba(255,231,67,1) 0%, rgba(249,59,59,1) 100%);
 }
 
+img{
+  height: 40vh;
+  width: auto;
+}
+
 /* SECTION Classes */
 
 .myBtn{
