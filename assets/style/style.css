@@ -10,6 +10,11 @@ img{
   width: auto;
 }
 
+h1{
+  font-family: 'Solitreo', cursive;
+  font-size: 5em;
+}
+
 /* SECTION Classes */
 
 .myBtn{
