@@ -1,11 +1,11 @@
 import { ValuesController } from "./Controllers/ValuesController.js";
 import { PlayersController } from "./Controllers/PlayersController.js";
-import { FruitsController } from "./Controllers/FruitsController.js";
+import { GamesController } from "./Controllers/GamesController.js";
 
 class App {
   //valuesController = new ValuesController();
   playersController = new PlayersController()
-  fruitsController = new FruitsController()
+  gamesController = new GamesController()
 }
 
 window["app"] = new App();
