@@ -18,6 +18,7 @@ export class GamesController{
       // @ts-ignore
       form.reset()
       if(formData.fruit == appState.fruit.name){
+        Pop.toast('You got it!','success','top', 1000, false)
         appState.player.score++
         gamesService.DrawRandomFruit()
         playersService.DrawPlayer()

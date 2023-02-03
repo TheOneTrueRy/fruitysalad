@@ -30,6 +30,7 @@ class GamesService{
         clearInterval(appState.IDs[0])
         setHTML('setPlayer', `<button type="submit" class="btn rounded myBtn py-2 fs-5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">Set Player</button>`)
         setHTML('typing', `<h3>Correctly type the name of as many fruit as you can within a minute!</h3>`)
+        setHTML('fruit', `<h1>Fruit Salad!</h1>`)
         setText('timer', '')
     }
 
